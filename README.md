@@ -4,8 +4,6 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
 ## React Compiler
 
@@ -73,3 +71,23 @@ export default defineConfig([
 ])
 
 ```
+
+## Deploy to GitHub Pages
+
+The workflow in `.github/workflows/deploy-pages.yml` builds and deploys the app whenever changes are pushed to `main`. It also supports manual runs from the Actions tab.
+
+Before the first deployment:
+
+1. Push the repository to GitHub and ensure the default branch is `main`.
+2. In **Settings > Pages**, set **Source** to **GitHub Actions**.
+3. Keep `public/CNAME` set to your custom hostname. It currently contains `admin.maleenakeerthi.com`.
+4. At your DNS provider, add a CNAME record:
+
+   ```text
+   Host: admin
+   Target: MK-Events.github.io
+   ```
+
+5. Push to `main` and wait for the workflow to finish. GitHub can then issue the HTTPS certificate from **Settings > Pages**.
+
+For a different hostname, update `public/CNAME` and the DNS record together. The Vite base path should remain `/` when using a custom domain.
