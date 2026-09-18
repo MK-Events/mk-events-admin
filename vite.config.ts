@@ -5,11 +5,7 @@ import { defineConfig } from "vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      "@mk": fileURLToPath(new URL("./src", import.meta.url)),
-    },
-  },
+  resolve: { tsconfigPaths: true },
   server: {
     proxy: {
       "/api": {
@@ -17,6 +13,13 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        loadPaths: [fileURLToPath(new URL("./src", import.meta.url))],
       },
     },
   },

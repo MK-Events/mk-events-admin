@@ -1,0 +1,12 @@
+{
+  "welcomeMessage": "Welcome back.",
+  "longMessage": "Sign in to manage your events, registrations, and website content.",
+  "loginPrompt": "Use your administrator account to continue.",
+  "labels": {
+    "signinButton": "Sign in",
+    "passwordLabel": "Password",
+    "emailLabel": "Email",
+    "passwordPlaceholder": "Your password",
+    "emailPlaceholder": "you@example.com"
+  }
+}

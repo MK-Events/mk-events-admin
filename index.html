@@ -5,6 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mk-events-admin</title>
+    <script>
+      const colorScheme =
+        localStorage.getItem("mantine-color-scheme") || "dark";
+      document.documentElement.setAttribute(
+        "data-mantine-color-scheme",
+        colorScheme,
+      );
+    </script>
   </head>
   <body>
     <div id="root"></div>

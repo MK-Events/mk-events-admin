@@ -1,0 +1,20 @@
+$font-sans: "DM Sans", "Segoe UI", sans-serif;
+$font-display: Georgia, serif;
+$color-ink: #2f2924;
+$color-muted: #928980;
+$color-surface: #fffdf9;
+$color-page: #f7f5f1;
+$color-border: #e9e3db;
+$color-primary: #d45b46;
+$color-primary-dark: #bd4d3a;
+
+:root {
+  --font-sans: #{$font-sans};
+  --font-display: #{$font-display};
+  --color-ink: #{$color-ink};
+  --color-muted: #{$color-muted};
+  --color-surface: #{$color-surface};
+  --color-page: #{$color-page};
+  --color-border: #{$color-border};
+  --color-primary: #{$color-primary};
+}

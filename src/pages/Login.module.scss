@@ -1,0 +1,75 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
+  gap: clamp(2rem, 8vw, 9rem);
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.intro {
+  max-width: 470px;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  background: var(--mantine-primary-color-filled);
+  color: var(--mantine-primary-color-filled-color);
+  font-family: var(--mantine-font-family-headings);
+  font-weight: 700;
+}
+
+.kicker {
+  margin-bottom: 0.6rem;
+  color: var(--mantine-primary-color-filled);
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+}
+
+.description {
+  max-width: 360px;
+  margin-top: 1.25rem;
+  color: var(--mantine-color-dimmed);
+  font-size: var(--mantine-font-size-lg);
+  line-height: 1.6;
+}
+
+.card {
+  background: var(--mantine-color-body);
+  box-shadow: var(--mantine-shadow-md);
+}
+
+@media (max-width: 700px) {
+  .page {
+    grid-template-columns: 1fr;
+    align-content: center;
+    padding: 2rem 1.25rem;
+  }
+
+  .intro h1 {
+    font-size: 3rem;
+  }
+}
+
+.alert {
+  color: var(--mantine-color-black);
+
+  :global(.mantine-Alert-message) {
+    color: var(--mantine-color-black);
+  }
+}
